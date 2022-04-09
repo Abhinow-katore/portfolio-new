@@ -1,0 +1,152 @@
+:root
+{
+  --yellow: #F5C32C;
+   --blue: #2c87ff;
+    --orange : #2c87ff;
+    --black : #000000;
+    --gray : #000000;
+    --blueCard : #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgba(101, 26, 26, 0.08);
+    --orangeCard: rgba(31, 149, 252, 0.45);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+.cursor{
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  position: absolute;
+  /* transition-duration: 10ms; */
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternate;
+  transform: translate(-50%, -50%);position: fixed;
+  /* z-index: ; */
+}
+
+.cursor::after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(4);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid rgb(80, 141, 255);
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  /* cursor: none;   */
+  /* background: rgb(64, 64, 64); */
+}
+
+.App{
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: var(--black);  
+    
+}
+
+.button {
+    background: linear-gradient(180deg, #5fccff 26.71%, #4487df 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(38, 67, 163, 0.42);
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Gumela', sans-serif;
+    padding: 11px 26px 11px 26px;
+  }
+  
+  .button:hover {
+    background: white;
+    cursor: pointer;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+  }
+
+
+  /* music */
+  .right-col{
+    position: relative;
+    top: -2950px;
+    left: 400px;
+    /* cursor: pointer; */
+  }
+  #icon{
+    cursor: pointer;
+    position: relative;
+    top: -2905px;
+    left: 1200px;
+    padding-top: 1px;
+    z-index: 1;
+    opacity: 0.1;
+    transform:scale(1.5) ;
+    z-index: 1;
+        /* animation-duration: 10ms; */
+    /* animation-delay: 10ms; */
+
+  }
+  #icon:hover{
+    transform: scale(1.8);
+    transition: 200ms ;
+  }
+
+  
+  @media screen and (max-width: 480px) {
+    .App {
+      padding: 0.5rem 1rem;
+
+    }
+    #icon{
+      cursor: pointer;
+      position: relative;
+      top: -2755px;
+      left: 75px;
+      transform: scale(.6);
+      z-index: 9;
+    }
+  }
+
+  
+
+  
