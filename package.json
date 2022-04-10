@@ -1,6 +1,6 @@
 {
   "homepage": "https://abhinow-katore.github.io/portfolio.github",
-  "name": "portofolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "predeploy": "yarn start",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
